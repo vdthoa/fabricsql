@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "detectschema",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "[dbo].[sp_DetectTableSchema]"
+        },
+        "linkedService": {
+          "name": "uat",
+          "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+              "endpoint": "g3dej5iainvulpr3gaeiaudroa-2ielul7yzkbediojmvyeiag364.datawarehouse.fabric.microsoft.com",
+              "artifactId": "d66bb415-7a07-46e1-91ce-96396b463b87",
+              "workspaceId": "2fba08d2-caf8-4182-a1c9-65704400dbf7"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
